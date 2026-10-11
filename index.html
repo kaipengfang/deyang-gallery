@@ -31,9 +31,9 @@ section::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:
 .hint{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font-size:12px;letter-spacing:.35em;color:var(--paper2);opacity:.6;animation:bob 2.2s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 /* ===== chapter ===== */
-.chapter .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;filter:saturate(.85) brightness(.72);transform:scale(1.06);transition:transform 6s ease-out,filter .6s}
+.chapter .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 30%;filter:saturate(.85) brightness(.72);transform:scale(1.06);transition:transform 6s ease-out,filter .6s}
 .chapter.in .bg{transform:scale(1)}
-.chapter .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,17,15,.55) 0%,rgba(20,17,15,0) 35%,rgba(20,17,15,.35) 60%,rgba(20,17,15,.96) 100%)}
+.chapter .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,17,15,.55) 0%,rgba(20,17,15,0) 35%,rgba(20,17,15,.45) 55%,rgba(20,17,15,.92) 78%,rgba(20,17,15,1) 100%)}
 .chapter .num{position:absolute;top:max(22px,env(safe-area-inset-top));left:22px;z-index:2;font-size:12px;letter-spacing:.3em;color:var(--gold);opacity:.9}
 .chapter .vt{position:absolute;top:max(22px,env(safe-area-inset-top));right:22px;z-index:2;writing-mode:vertical-rl;font-size:clamp(22px,6vw,34px);letter-spacing:.3em;line-height:1.1;text-shadow:0 2px 20px rgba(0,0,0,.5);font-weight:500;color:var(--paper)}
 .chapter .vt small{display:block;font-size:.5em;letter-spacing:.25em;color:var(--gold);margin-right:.3em}
