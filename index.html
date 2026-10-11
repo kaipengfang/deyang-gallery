@@ -24,7 +24,7 @@ section::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:
 .cover{justify-content:center;align-items:center;text-align:center;padding:48px 24px;background:
  radial-gradient(120% 70% at 50% 0%,#3a2a21 0%,var(--ink) 60%)}
 .cover .seal{width:64px;height:64px;border:2px solid var(--cinnabar);color:var(--cinnabar);display:grid;place-items:center;font-size:22px;letter-spacing:2px;line-height:1.05;writing-mode:vertical-rl;margin:0 auto 28px;opacity:.95;border-radius:3px}
-.cover h1{font-weight:500;font-size:clamp(30px,8.5vw,56px);letter-spacing:.14em;line-height:1.3}
+.cover h1{font-weight:500;font-size:clamp(26px,7.4vw,56px);letter-spacing:.1em;line-height:1.3;white-space:nowrap}
 .cover .sub{margin-top:14px;font-size:clamp(14px,3.6vw,18px);letter-spacing:.3em;color:var(--paper2);opacity:.85}
 .cover .meta{margin-top:40px;font-size:13px;letter-spacing:.25em;color:var(--gold);opacity:.9;line-height:2}
 .rule{width:1px;height:48px;background:linear-gradient(var(--gold),transparent);margin:26px auto 0}
@@ -127,6 +127,7 @@ nav a.on{opacity:1;height:18px;border-radius:3px;background:var(--gold)}
 
 </main>
 <script>
+if(location.hash){const t=document.querySelector(location.hash);if(t){document.getElementById('main').style.scrollBehavior='auto';t.scrollIntoView();document.getElementById('main').style.scrollBehavior=''}}
 const main=document.getElementById('main'),secs=[...document.querySelectorAll('section')],nav=document.getElementById('nav');
 secs.forEach((s,i)=>{const a=document.createElement('a');a.href='#'+s.id;a.onclick=e=>{e.preventDefault();s.scrollIntoView({behavior:'smooth'})};nav.appendChild(a)});
 const dots=[...nav.children];
